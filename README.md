@@ -27,3 +27,4 @@ heroku git:remote -a portfolio-simulator-web
 cd ~/github.com/hijjiri/envoy
 heroku create portfolio-simulator-envoy
 heroku git:remote -a portfolio-simulator-envoy
+heroku buildpacks:add https://github.com/heroku/heroku-buildpack-docker
