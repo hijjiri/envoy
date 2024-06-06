@@ -14,3 +14,16 @@ brew services restart jenkins-lts
 # sshサーバーの設定関連
 ## macOSの場合はデフォルトでsshサーバーが入っているので、以下コマンドでオンに設定
 sudo systemsetup -setremotelogin on
+
+# heroku
+cd ~/github.com/hijjiri/core
+heroku create portfolio-simulator-core
+heroku git:remote -a portfolio-simulator-core
+
+cd ~/github.com/hijjiri/web
+heroku create portfolio-simulator-web
+heroku git:remote -a portfolio-simulator-web
+
+cd ~/github.com/hijjiri/envoy
+heroku create portfolio-simulator-envoy
+heroku git:remote -a portfolio-simulator-envoy
