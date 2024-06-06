@@ -16,3 +16,9 @@ brew services restart jenkins-lts
 sudo systemsetup -setremotelogin on
 
 # heroku
+heroku apps:destroy --app portfolio-simulator --confirm portfolio-simulator
+heroku create portfolio-simulator
+git remote rm heroku
+heroku git:remote -a portfolio-simulator
+heroku buildpacks:clear
+heroku stack:set container

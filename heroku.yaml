@@ -1,7 +1,5 @@
 build:
   docker:
     web: Dockerfile
-release:
-  command:
-    - docker-compose down
-    - docker-compose up -d
+run:
+  web: envoy -c /etc/envoy/envoy.yaml
