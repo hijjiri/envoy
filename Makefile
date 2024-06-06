@@ -1,5 +1,3 @@
-# Makefile
-
 .PHONY: up down
 
 up:
